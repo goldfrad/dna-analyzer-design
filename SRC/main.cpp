@@ -2,6 +2,7 @@
 
 int main() {
     std::cout << "class DNA" << std::endl;
+
     DNASequence dna1("AGACTTTG");
     std::cout << "len need be 8: " << dna1.length() << std::endl;
     std::string str("GGAGCAATGTG");
@@ -15,13 +16,14 @@ int main() {
     std::cout << dna2.pairing() << std::endl;
     std::cout << dna2.count( "TG") << std::endl;
     std::vector<size_t> vec = dna2.findAll("TG");
-    for (int i = 0; i < vec.size(); ++i){
+    for (size_t i = 0; i < vec.size(); ++i){
         std::cout << vec[i] << " ";
     }
     std::cout << std::endl;
     std::cout << "len need be 11: " << dna1.length() << std::endl;
-    std::cout << ("AAAA" == "AAAA") << std::endl;
+
     DNASequence invalidDNA("AAAy");
     std::cout << invalidDNA << std::endl;
+
     return 0;
 }

@@ -17,7 +17,7 @@ DNASequence::DNASequence(const std::string &dnaString) :m_dnaString(InitDNA(dnaS
 DNASequence::DNASequence(const DNASequence &dnaString): m_dnaString(InitDNA((const char *)dnaString.m_dnaString)){}
 
 DNASequence::DNASequence(size_t size) {
-    m_dnaString = new Nucleotide(size);
+    m_dnaString = new Nucleotide[size];
 }
 
 DNASequence& DNASequence::operator=(DNASequence &dnaString) {
@@ -26,7 +26,7 @@ DNASequence& DNASequence::operator=(DNASequence &dnaString) {
         delete[] m_dnaString;
         char* temp = strcpy(new char [ strlen(dnaString.getDNAData())+1], dnaString.getDNAData());
         m_dnaString = (Nucleotide*)temp;
-    };
+    }
     return *this;
 }
 
@@ -142,7 +142,7 @@ std::ostream& operator<<(std::ostream& os, const DNASequence &dnaString){
     return os;
 }
 
-bool operator==(DNASequence &dnaSequence1, DNASequence &dnaSequence2) {
+bool operator==(const DNASequence &dnaSequence1, const DNASequence &dnaSequence2) {
     if (dnaSequence1.getDNAData() - dnaSequence2.getDNAData())
         return false;
     return true;
@@ -152,9 +152,10 @@ bool operator!=(DNASequence &dnaSequence1, DNASequence &dnaSequence2) {
     return !(dnaSequence1 == dnaSequence2);
 }
 
-DNASequence::Nucleotide& DNASequence::Nucleotide::operator=(const Nucleotide& c) {
+const DNASequence::Nucleotide& DNASequence::Nucleotide::operator=(const Nucleotide& c) {
     isValid(c.m_c);
     m_c = c.m_c;
+    return c;
 }
 
 DNASequence::Nucleotide::operator char() {

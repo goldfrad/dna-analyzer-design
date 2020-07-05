@@ -13,7 +13,7 @@ private:
         Nucleotide(){}
 
         Nucleotide(char c): m_c(c){}
-        Nucleotide& operator=(const Nucleotide& c);
+        const Nucleotide& operator=(const Nucleotide& c);
         char getNucleotide(){ return m_c;}
         operator char ();
 
@@ -43,7 +43,7 @@ public:
     ~DNASequence(){delete[] m_dnaString;}
 };
 
-bool operator == (DNASequence &dnaString1, DNASequence &dnaString2);
+bool operator == (const DNASequence &dnaString1, const DNASequence &dnaString2);
 bool operator != (DNASequence &dnaString1, DNASequence &dnaString2);
 
 #endif
