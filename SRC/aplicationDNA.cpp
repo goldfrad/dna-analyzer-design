@@ -11,10 +11,10 @@ void AplicationDNA::start() {
 
         m_nowCommand = factory.getCommand(massageVec.front());
         if(m_nowCommand){
-            std::cout << m_nowCommand->run(massageVec) << std::endl;
+            m_nowCommand->run(massageVec);
         }
         else{
-            std::cout << "this command not found" << std::endl;
+            std::cout << "'" << massageVec.front() << "' command not found" << std::endl;
         }
         f--;
     }
