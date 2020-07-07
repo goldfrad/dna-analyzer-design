@@ -4,13 +4,16 @@
 #include "data.h"
 #include <map>
 
+
 class DataStructure{
-    void insert(Data);
-    void insert(size_t, Data);
-    void insert(std::string, Data);
+public:
+    typedef std::map<size_t , Data> mapID;
+    typedef std::map<std::string , Data> mapName;
+    void insert(Data& data);
+
 private:
-    std::map<size_t , Data> m_idMap;
-    std::map<std::string , Data> m_nameMap;
+    mapID m_idMap;
+    mapName m_nameMap;
 };
 
 #endif //SRC_DATASTRUCTURE_H
