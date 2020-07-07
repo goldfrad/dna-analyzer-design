@@ -5,7 +5,7 @@
 
 class New: public CreateDNA{
 public:
-    virtual int run();
+    virtual int run(std::vector<std::string>& vecParmeter);
 };
 
 #endif //DNAP_NEWDNA_H

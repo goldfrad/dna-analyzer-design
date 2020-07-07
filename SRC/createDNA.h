@@ -4,7 +4,7 @@
 #include "command.h"
 
 class CreateDNA: public ICommand{
-    virtual int run() = 0;
+    virtual int run(std::vector<std::string>&) = 0;
 };
 
 #endif //DNAP_CREATEDNA_H

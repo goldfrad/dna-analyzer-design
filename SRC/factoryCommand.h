@@ -3,12 +3,11 @@
 
 #include "newDNA.h"
 #include <iostream>
-#include <sstream>
 #include <string.h>
 
 class FactoryCommand{
 public:
-    static ICommand* getCommand(std::string& lineOfCommand);
+    ICommand* getCommand(std::string& command);
 };
 
 #endif //DNAP_FACTORYCOMMAND_H

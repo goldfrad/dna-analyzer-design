@@ -2,8 +2,8 @@
 #define DNAP_APLICATIONDNA_H
 
 #include <iostream>
-#include <string>
 #include "factoryCommand.h"
+#include "parser.h"
 
 class AplicationDNA{
 public:

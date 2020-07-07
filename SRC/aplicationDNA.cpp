@@ -7,9 +7,11 @@ void AplicationDNA::start() {
         std::string messageVar;
         std::cout << "< cmd <<< ";
         getline (std::cin, messageVar);
-        m_nowCommand = factory.getCommand(messageVar);
+        std::vector<std::string> massageVec = Parser::getAsList(messageVar);
+
+        m_nowCommand = factory.getCommand(massageVec.front());
         if(m_nowCommand){
-            std::cout << m_nowCommand->run() << std::endl;
+            std::cout << m_nowCommand->run(massageVec) << std::endl;
         }
         else{
             std::cout << "this command not found" << std::endl;
