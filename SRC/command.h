@@ -3,11 +3,14 @@
 
 #include <string>
 #include <vector>
-#include "data.h"
+#include "dataStructure.h"
 
 class ICommand{
 public:
     virtual int run(std::vector<std::string>&) = 0;
+
+protected:
+    DataStructure m_ds;
 };
 
 #endif //DNAP_COMMAND_H
