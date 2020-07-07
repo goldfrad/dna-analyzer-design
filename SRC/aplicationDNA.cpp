@@ -14,7 +14,7 @@ void AplicationDNA::start() {
             m_nowCommand->run(massageVec);
         }
         else{
-            std::cout << "'" << massageVec.front() << "' command not found" << std::endl;
+            std::cout << massageVec.front() << ": command not found" << std::endl;
         }
         f--;
     }
