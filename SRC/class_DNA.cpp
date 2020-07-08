@@ -39,6 +39,7 @@ DNASequence::Nucleotide* DNASequence::InitDNA(const char *dnaString) {
     }
     catch (const char *dnaExeption) {
         std::cout << dnaExeption << std::endl;
+        throw;
     }
 
     for (size_t i = 0; i < strlen(dnaString); ++i) {
