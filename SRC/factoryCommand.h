@@ -3,6 +3,7 @@
 
 #include "newDNA.h"
 #include "load.h"
+#include "dup.h"
 #include <iostream>
 #include <string.h>
 

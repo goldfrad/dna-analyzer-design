@@ -3,12 +3,16 @@
 
 ICommand* FactoryCommand::getCommand(std::string& command) {
 
-    if (!strcmp("new", command.c_str())){
+    if ("new" == command){
         ICommand* n = new New;
         return n;
     }
-    else if(!strcmp("load", command.c_str())){
+    else if("load" == command){
         ICommand* n = new Load;
+        return n;
+    }
+    else if("dup" == command){
+        ICommand* n = new Dup;
         return n;
     }
     return NULL;
