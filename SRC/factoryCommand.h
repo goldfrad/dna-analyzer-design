@@ -2,6 +2,7 @@
 #define DNAP_FACTORYCOMMAND_H
 
 #include "newDNA.h"
+#include "load.h"
 #include <iostream>
 #include <string.h>
 
