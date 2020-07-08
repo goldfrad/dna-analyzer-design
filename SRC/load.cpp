@@ -5,7 +5,7 @@ int Load::run(std::vector<std::string> &vecParmeter) {
         FileReader file(vecParmeter[1]);
         std::string dna = file.read();
         Data newdna(dna, vecParmeter[2].erase(0, 1));
-        m_ds.insert(newdna);
+        ICommand::m_ds.insert(newdna);
         std::cout << "[" << newdna.getID() << "] " << newdna.getDNA() << " " << newdna.getName() << std::endl;
     }
     catch (const char* dnaExeption){

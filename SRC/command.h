@@ -10,7 +10,7 @@ public:
     virtual int run(std::vector<std::string>&) = 0;
 
 protected:
-    DataStructure m_ds;
+    static DataStructure m_ds;
 };
 
 #endif //DNAP_COMMAND_H
