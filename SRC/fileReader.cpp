@@ -5,11 +5,10 @@ FileReader::FileReader(const std::string & name): m_nameFile(name) {}
 
 std::string FileReader::read() {
 
-    std::ifstream file("filedna.txt");
+    std::ifstream file;
     std::string line;
-    if (file.is_open()) {
-        std::getline(file, line);
-        file.close();
-    }
+    file.open(m_nameFile.c_str());
+    std::getline(file, line);
+    file.close();
     return line;
 }
