@@ -10,7 +10,8 @@ public:
     typedef std::map<size_t , Data> mapID;
     typedef std::map<std::string , Data> mapName;
     void insert(Data& data);
-
+    Data& findByID(size_t);
+    Data& findByName(std::string&);
 private:
     mapID m_idMap;
     mapName m_nameMap;
