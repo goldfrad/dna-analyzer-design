@@ -7,6 +7,7 @@ void isValid(const char c){
     }
     catch (const char *dnaExeption){
         std::cout << dnaExeption << std::endl;
+        throw ;
     }
 }
 
