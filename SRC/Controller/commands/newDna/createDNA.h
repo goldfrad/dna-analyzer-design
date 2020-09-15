@@ -1,7 +1,7 @@
 #ifndef DNAP_CREATEDNA_H
 #define DNAP_CREATEDNA_H
 
-#include "command.h"
+#include "../command.h"
 
 class CreateDNA: public ICommand{
     virtual int run(std::vector<std::string>&) = 0;

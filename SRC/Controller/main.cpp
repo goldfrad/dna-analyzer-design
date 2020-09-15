@@ -1,7 +1,5 @@
-#include "fileReader.h"
-#include "cmdReader.h"
+#include "../View/reader/cmdReader.h"
 #include "aplicationDNA.h"
-
 
 int main() {
     std::cout << "class DNA" << std::endl;

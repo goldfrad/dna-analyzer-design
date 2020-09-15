@@ -1,9 +1,10 @@
 #ifndef DNAP_FACTORYCOMMAND_H
 #define DNAP_FACTORYCOMMAND_H
 
-#include "newDNA.h"
-#include "load.h"
-#include "dup.h"
+#include "commands/newDna/newDNA.h"
+#include "commands/newDna/load.h"
+#include "commands/newDna/dup.h"
+#include "commands/command.h"
 #include <iostream>
 #include <string.h>
 

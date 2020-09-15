@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include "dataStructure.h"
+#include "../../Model/dataStructure.h"
 
 class ICommand{
 public:
