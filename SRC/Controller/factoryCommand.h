@@ -4,7 +4,7 @@
 #include "commands/newDna/newDNA.h"
 #include "commands/newDna/load.h"
 #include "commands/newDna/dup.h"
-#include "commands/command.h"
+#include "commands/Analysis/len.h"
 #include <iostream>
 #include <string.h>
 

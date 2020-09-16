@@ -7,12 +7,19 @@ ICommand* FactoryCommand::getCommand(std::string& command) {
         ICommand* n = new New;
         return n;
     }
+
     else if("load" == command){
         ICommand* n = new Load;
         return n;
     }
+
     else if("dup" == command){
         ICommand* n = new Dup;
+        return n;
+    }
+
+    else if("len" == command){
+        ICommand* n = new Len;
         return n;
     }
     return NULL;
