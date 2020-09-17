@@ -1,9 +1,13 @@
 #ifndef SRC_PARAMS_H
 #define SRC_PARAMS_H
 
+#include <string>
+#include <vector>
 
-class params {
-    virtual void paramProcessing() = 0;
+class Params {
+public:
+    virtual bool chekParams(std::vector<std::string>&) = 0;
+    virtual void paramProcessing(std::vector<std::string>&) = 0;
 };
 
 
