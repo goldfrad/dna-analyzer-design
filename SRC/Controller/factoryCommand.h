@@ -5,6 +5,7 @@
 #include "commands/newDna/load.h"
 #include "commands/newDna/dup.h"
 #include "commands/Analysis/len.h"
+#include "commands/Analysis/find.h"
 #include <iostream>
 #include <string.h>
 
