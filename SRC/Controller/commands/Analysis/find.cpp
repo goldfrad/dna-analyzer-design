@@ -1,4 +1,3 @@
-#include <sstream>
 #include "find.h"
 
 int Find::run(std::vector<std::string> &vecParmeter) {

@@ -1,4 +1,3 @@
-#include <sstream>
 #include "len.h"
 
 int Len::run(std::vector<std::string> &vecParmeter) {

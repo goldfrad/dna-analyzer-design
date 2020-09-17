@@ -2,7 +2,6 @@
 #define SRC_DUP_H
 
 #include "createDNA.h"
-#include <sstream>
 
 class Dup: public CreateDNA{
 public:
